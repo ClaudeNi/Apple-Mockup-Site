@@ -3,6 +3,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #ccc;
+    --link-color: #2996FD;
 }
 
 /* Fonts */
@@ -11,8 +17,8 @@
     font-style: normal;
     font-weight: 100;
     src:
-        url("/fonts/sf-pro-display_regular.woff2") format("woff2"),
-        url("/fonts/sf-pro-display_regular.woff2") format("woff2");
+        url("../fonts/sf-pro-display_regular.woff2") format("woff2"),
+        url("../fonts/sf-pro-display_regular.woff2") format("woff2");
 }
   
 @font-face {
@@ -20,8 +26,8 @@
     font-style: normal;
     font-weight: 600;
     src:
-        url("/fonts/sf-pro-display_semibold.woff2") format("woff2"),
-        url("/fonts/sf-pro-display_semibold.woff2") format("woff2");
+        url("../fonts/sf-pro-display_semibold.woff2") format("woff2"),
+        url("../fonts/sf-pro-display_semibold.woff2") format("woff2");
 }
   
 @font-face {
@@ -29,8 +35,8 @@
     font-style: normal;
     font-weight: 600;
     src:
-        url("/fonts/sf-pro-text_semibold.woff2") format("woff2"),
-        url("/fonts/sf-pro-text_semibold.woff2") format("woff2");
+        url("../fonts/sf-pro-text_semibold.woff2") format("woff2"),
+        url("../fonts/sf-pro-text_semibold.woff2") format("woff2");
 }
   
 @font-face {
@@ -38,8 +44,8 @@
     font-style: normal;
     font-weight: 400;
     src:
-        url("/fonts/sf-pro-text_regular.woff2") format("woff2"),
-        url("/fonts/sf-pro-text_regular.woff2") format("woff2");
+        url("../fonts/sf-pro-text_regular.woff2") format("woff2"),
+        url("../fonts/sf-pro-text_regular.woff2") format("woff2");
 }
   
 @font-face {
@@ -47,8 +53,8 @@
     font-style: normal;
     font-weight: 400;
     src:
-        url("/fonts/sf-pro-icons_regular.woff2") format("woff2"),
-        url("/fonts/sf-pro-icons_regular.woff2") format("woff2");
+        url("../fonts/sf-pro-icons_regular.woff2") format("woff2"),
+        url("../fonts/sf-pro-icons_regular.woff2") format("woff2");
 }
 
 a {
@@ -67,12 +73,48 @@ a {
     justify-content: center;
 }
 
-.btn {
-
+.link {
+    color: var(--link-color);
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 29px;
+    text-align: center;
+    margin: 0 1rem;
 }
 
-.link {
+.link:hover {
+    border-bottom: 1px solid var(--link-color);
+}
 
+.ad-link:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    line-height: 29px;
+    text-align: center;
+    margin: 2rem 0 1.5rem 0;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 29px;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    cursor: pointer;
 }
 
 /* Navbar Styling */
@@ -95,7 +137,7 @@ a {
 }
 
 #navbar ul li a {
-    color: #ccc;
+    color: var(--primary-color);
     padding: 0.7rem;
     font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
@@ -121,4 +163,42 @@ main .ad {
     line-height: 21px;
     color: #fff;
     padding: 0.6rem;
+}
+
+main .ad a {
+    color: #fff;
+}
+
+/* Top Half styling */
+#half-1 {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#half-1 .box-1 {
+    background-color: #FBEDF9;
+}
+
+#half-1 .box-1 .top-half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 2rem 0;
+}
+
+#half-1 .box-2 {
+    background: url("/imgs/iphone_13_pro.jpg") center center / cover no-repeat;
+}
+
+#half-1 .box-3 {
+    background: url("/imgs/iphone_13.jpg") center center / cover no-repeat;
+}
+
+#half-1 .box-3 .title {
+    color: #fff;
+}
+
+#half-1 .box-3 .sub-title {
+    color: #FEC2EB;
 }
