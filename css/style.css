@@ -359,6 +359,7 @@ footer {
 .bottom-footer .top-bar .footer-link {
     color: var(--link-color);
     border-bottom: 1px solid transparent;
+    font-size: 0.8rem;
 }
 
 .bottom-footer .top-bar .footer-link:hover {

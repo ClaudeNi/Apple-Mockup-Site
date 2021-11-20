@@ -1,0 +1,32 @@
+@media (max-width: 1150px) {
+    #half-1 .box-1 .bottom-half img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #navbar ul li a {
+        padding: 0.7rem 0.3rem
+    }
+
+    #half-1 .box-1 .bottom-half img {
+        width: 250px;
+    }
+
+    .top-footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .top-footer ul {
+        max-width: 90%;
+    }
+
+    .middle-footer {
+        width: 90%;
+    }
+
+    .bottom-footer {
+        width: 90%;
+    }
+}
